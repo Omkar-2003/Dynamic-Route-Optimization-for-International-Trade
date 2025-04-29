@@ -5,15 +5,6 @@ const cors = require("cors");
 const multer = require('multer');
 
 
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'uploads/') // Specify the directory where files should be uploaded
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, file.originalname) // Use the original filename for uploaded files
-//   }
-// });
-
 const upload = multer();
 
 const app = express();
@@ -32,7 +23,7 @@ const addEntity = require("./routes/entry.js");
 const SeaandAirRoute = require("./routes/journeytracking.js");
 
 mongoose
-  .connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/NorthStar", {
+  .connect("", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -43,16 +34,6 @@ mongoose
     console.error("Error connecting to MongoDB:", error);
   });
 
-
-  // app.post('/file', upload.single('data'), async (req, res) => {
-  //   try {
-  //     console.log(req.file); // This will log information about the uploaded file
-  //     console.log(req.body.data); // This will log the value of the 'data' field in form-data
-  //     res.status(200).json('success');
-  //   } catch (err) {
-  //     res.status(500).json('err: ' + err);
-  //   }
-  // });
 
 app.use("/api", databaseapi);
 app.use("/api", routesapi);

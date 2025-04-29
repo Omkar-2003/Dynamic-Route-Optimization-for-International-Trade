@@ -667,7 +667,7 @@ app.get("/", async (req, res) => {
 app.get("/prompt", async (req, res) => {
   try {
     const genAI = new GoogleGenerativeAI(
-      "AIzaSyAZRoPOt2AQAp4dh1vWP1Dc-BON9YmhDSc"
+      ""
     );
     //long lat
     const route1Coordinates = [

@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "searoutes-docs",
+      "source": "@searoutes-docs/v2.0#336s9hc37lnvvag61",
+      "integrity": "sha512-0+8TvpMK3gDKzIkZFSchQKjQm6dcNbUzc6SfdxUNschQaYqMUyHEcaYVMcS12dalqq+Dq97ggBjauxzslAhAZg==",
+      "installerVersion": "6.1.1"
+    }
+  ]
+}
